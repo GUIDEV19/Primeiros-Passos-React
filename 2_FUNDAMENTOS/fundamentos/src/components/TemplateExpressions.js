@@ -8,12 +8,21 @@ const TemplateExpressions = () => {
         job: "Programmer",
         sexualidade: "Indefinida"
     }
+
+    const loop = () => {
+        names.forEach((name) => {
+            return <li>{name}</li>
+        })
+    }
     return (
         <div>
             <h1>Olá {names[2]}, tudo bem?</h1>
             <p>Sua idade é: {data.age}</p>
             <p>Seu trabalho: {data.job}</p>
             <p>Sua sexualidade: {data.sexualidade}</p>
+            <ul>
+                {loop()}
+            </ul>
             <MyComponent />
         </div>
     )
